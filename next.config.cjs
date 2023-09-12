@@ -1,3 +1,5 @@
+import { withContentlayer } from "next-contentlayer";
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   eslint: {
@@ -9,4 +11,4 @@ const nextConfig = {
   output: "standalone",
 };
 
-module.exports = nextConfig;
+module.exports = withContentlayer()(nextConfig);
