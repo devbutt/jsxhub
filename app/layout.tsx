@@ -1,13 +1,12 @@
-import "./globals.css";
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+"use client";
 
-const inter = Inter({ subsets: ["latin"] });
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import ScrollToTop from "@/components/ScrollTop";
+import { Providers } from "./providers";
+//import Head from "./head";
 
-export const metadata: Metadata = {
-  title: "JSXHub",
-  description: "Design in UX and UI React NExtJs Applications",
-};
+import "../styles/index.css";
 
 export default function RootLayout({
   children,
@@ -15,8 +14,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html suppressHydrationWarning lang="en">
+      {/* <Head /> */}
+
+      <body className="dark:bg-dark">
+        <Providers>
+          <Header />
+          {children}
+          <Footer />
+          <ScrollToTop />
+        </Providers>
+      </body>
     </html>
   );
 }
