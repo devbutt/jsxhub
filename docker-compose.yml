@@ -1,8 +1,26 @@
-version: "3"
+# version: "3"
+# services:
+#   nextjs:
+#     build:
+#       context: .
+#       dockerfile: Dockerfile
+#     ports:
+#       - 3000:3000
+
+version: "3.8"
 services:
-  nextjs:
+  frontend:
+    container_name: frontend
     build:
-      context: .
-      dockerfile: Dockerfile
+      context: . #if your Dockerfile is not at the same level change the path here (./frontend)
+      target: dev
+    restart: always
+    command: yarn dev
+    environment:
+      - NODE_ENV=development
+    volumes:
+      - .:/app
+      - /app/node_modules
+      - /app/.next
     ports:
       - 3000:3000

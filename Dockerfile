@@ -15,6 +15,13 @@ RUN \
   else echo "Lockfile not found." && exit 1; \
   fi
 
+FROM base AS dev
+
+WORKDIR /app
+COPY --from=deps /app/node_modules ./node_modules
+COPY . .
+
+
 
 # Rebuild the source code only when needed
 FROM base AS builder
@@ -27,26 +34,21 @@ COPY . .
 # Uncomment the following line in case you want to disable telemetry during the build.
 ENV NEXT_TELEMETRY_DISABLED 1
 
-#RUN yarn build
+RUN yarn build
 
 # If using npm comment out above and use below instead
-RUN npm run build
+# RUN npm run build
 
 # Production image, copy all the files and run next
 FROM base AS runner
 WORKDIR /app
 
-ENV NODE_ENV production
 # Uncomment the following line in case you want to disable telemetry during runtime.
 ENV NEXT_TELEMETRY_DISABLED 1
 
-RUN addgroup --system nodejs --gid 1001
-RUN adduser --system nextjs --uid 1001
-RUN mkdir -p /app/.next/standalone
-RUN mkdir -p /app/.next/static
+RUN addgroup --system --gid 1001 nodejs
+RUN adduser --system --uid 1001 nextjs
 
-COPY --from=builder /app/next.config.cjs ./
-COPY --from=builder /app .
 COPY --from=builder /app/public ./public
 
 # Automatically leverage output traces to reduce image size
@@ -54,7 +56,8 @@ COPY --from=builder /app/public ./public
 COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
 COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
 
-#USER nextjs
+USER nextjs
+
 
 EXPOSE 3000
 

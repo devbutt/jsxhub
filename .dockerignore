@@ -2,8 +2,7 @@
 .gitignore
 node_modules
 npm-debug.log
-Dockerfile*
-docker-compose*
+next-env.d.ts
 READEME.md
 LICENCE
 .vscode
