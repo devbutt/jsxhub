@@ -46,8 +46,8 @@ WORKDIR /app
 # Uncomment the following line in case you want to disable telemetry during runtime.
 ENV NEXT_TELEMETRY_DISABLED 1
 
-RUN addgroup --system --gid 1001 nodejs
-RUN adduser -D --system --uid 1001 nextjs
+RUN addgroup --system --gid 5002 nextjs
+RUN adduser -D --system --uid 5002 nextjs
 USER nextjs
 
 COPY --from=builder /app/next.config.cjs ./
