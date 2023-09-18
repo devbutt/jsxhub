@@ -50,7 +50,7 @@ RUN addgroup --system --gid 1001 nodejs
 RUN adduser -D --system --uid 1001 nextjs
 USER nextjs
 
-COPY --from=builder /app/next.config.js ./
+COPY --from=builder /app/next.config.cjs ./
 COPY --from=builder /app/public ./public
 
 # Automatically leverage output traces to reduce image size
