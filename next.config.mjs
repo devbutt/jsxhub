@@ -9,9 +9,6 @@ const nextConfig = {
     ignoreBuildErrors: true,
   },
   output: "standalone",
-  experimental: {
-    outputStandalone: true,
-  },
 };
 
 module.exports = withContentlayer()(nextConfig);
