@@ -59,10 +59,9 @@ COPY --from=builder /app/public ./public
 
 # Automatically leverage output traces to reduce image size
 # https://nextjs.org/docs/advanced-features/output-file-tracing
-#COPY --from=builder /app/.next/standalone ./
-#RUN chown -R nextjs:nodejs /app/.next/standalone ./
-COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
-COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
+
+#COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
+#COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
 
 USER 1001
 
@@ -73,4 +72,4 @@ ENV PORT 3000
 # set hostname to localhost
 ENV HOSTNAME "localhost"
 
-CMD ["node_modules/.bin/next", "server.js"]
+CMD ["node", "server.js"]
