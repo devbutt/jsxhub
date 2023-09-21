@@ -8,8 +8,6 @@ const nextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
-  output: "standalone",
-  output: "export",
 };
 
 module.exports = withContentlayer()(nextConfig);
