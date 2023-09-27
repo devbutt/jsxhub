@@ -31,7 +31,8 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     ".contentlayer/generated",
-    "contentlayer.config.js"
+    "contentlayer.config.js",
+    "lib/siteMetaData.js"
   ],
   "exclude": ["node_modules"]
 }

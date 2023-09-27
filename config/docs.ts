@@ -30,8 +30,7 @@ export const docsConfig: DocsConfig = {
         },
         {
           title: "Contentlayer",
-          href: "/docs/in-progress",
-          disabled: true,
+          href: "/docs/contentlayer",
         },
         {
           title: "Components",

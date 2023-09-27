@@ -19,7 +19,9 @@ const Hero = () => {
                   Frameworks.
                 </h1>
                 <p className="mb-12 text-base font-medium !leading-relaxed text-body-color dark:text-white dark:opacity-90 sm:text-lg md:text-xl">
-                  Transforming JavaScript into Engaging Web Experiences .
+                  Transforming JavaScript into Engaging Web Experiences .<br />
+                  Next.js 13 is a powerful and flexible framework that can help
+                  you build fast, scalable, and SEO-friendly applications.
                 </p>
                 <div className="flex flex-col items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
                   <Link

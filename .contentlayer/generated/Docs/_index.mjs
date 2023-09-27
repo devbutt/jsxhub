@@ -2,7 +2,8 @@
 
 import docs__indexMdx from './docs__index.mdx.json' assert { type: 'json' }
 import docs__documentation__componentsMdx from './docs__documentation__components.mdx.json' assert { type: 'json' }
+import docs__documentation__contentlayerMdx from './docs__documentation__contentlayer.mdx.json' assert { type: 'json' }
 import docs__documentation__githubMdx from './docs__documentation__github.mdx.json' assert { type: 'json' }
 import docs__documentation__indexMdx from './docs__documentation__index.mdx.json' assert { type: 'json' }
 
-export const allDocs = [docs__indexMdx, docs__documentation__componentsMdx, docs__documentation__githubMdx, docs__documentation__indexMdx]
+export const allDocs = [docs__indexMdx, docs__documentation__componentsMdx, docs__documentation__contentlayerMdx, docs__documentation__githubMdx, docs__documentation__indexMdx]

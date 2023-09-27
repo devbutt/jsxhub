@@ -7,12 +7,12 @@ const Features = () => {
     <>
       <section
         id="features"
-        className="bg-primary/[.03] py-16 md:py-20 lg:py-28"
+        className="bg-primary/[.02] py-16 md:py-20 lg:py-28"
       >
         <div className="container">
           <SectionTitle
-            title="Main Features"
-            paragraph="There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form."
+            title="What we Do!"
+            paragraph="There are easy ways of doing things and sometimes there are easier ways, but when it comes to web developement there are no short cuts."
             center
           />
 

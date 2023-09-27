@@ -50,9 +50,7 @@ WORKDIR /app
 ENV NEXT_TELEMETRY_DISABLED 1
 
 RUN addgroup --system --gid 1001 nodejs && adduser --system --uid 1001 nextjs
-#RUN addgroup --system --gid 5002 nextjs
-#RUN adduser -D --system --uid 5002 nextjs
-#USER 1001
+
 
 COPY --from=builder /app/next.config.cjs ./
 COPY --from=builder /app/public ./public
@@ -70,6 +68,7 @@ EXPOSE 3000
 
 ENV PORT 3000
 # set hostname to localhost
+# set hostname to 0.0.0.0 production
 ENV HOSTNAME "localhost"
 
 CMD ["node", "server.js"]
