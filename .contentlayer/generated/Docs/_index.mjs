@@ -5,5 +5,8 @@ import docs__documentation__componentsMdx from './docs__documentation__component
 import docs__documentation__contentlayerMdx from './docs__documentation__contentlayer.mdx.json' assert { type: 'json' }
 import docs__documentation__githubMdx from './docs__documentation__github.mdx.json' assert { type: 'json' }
 import docs__documentation__indexMdx from './docs__documentation__index.mdx.json' assert { type: 'json' }
+import docs__guides__indexMdx from './docs__guides__index.mdx.json' assert { type: 'json' }
+import docs__guides__privacyMdx from './docs__guides__privacy.mdx.json' assert { type: 'json' }
+import docs__guides__termsMdx from './docs__guides__terms.mdx.json' assert { type: 'json' }
 
-export const allDocs = [docs__indexMdx, docs__documentation__componentsMdx, docs__documentation__contentlayerMdx, docs__documentation__githubMdx, docs__documentation__indexMdx]
+export const allDocs = [docs__indexMdx, docs__documentation__componentsMdx, docs__documentation__contentlayerMdx, docs__documentation__githubMdx, docs__documentation__indexMdx, docs__guides__indexMdx, docs__guides__privacyMdx, docs__guides__termsMdx]

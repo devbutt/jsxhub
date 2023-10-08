@@ -20,31 +20,31 @@ const blogData: Blog[] = [
   {
     id: 2,
     url: "/",
-    title: "9 simple ways to improve your design skills",
+    title: "5 ways to Craft compelling and informative content",
     paragraph:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit amet dictum neque, laoreet dolor.",
+      "These five strategies will help you craft compelling and informative content that not only informs but also engages and resonates with your audience. In-depth research lends authority to your content. It's the bedrock of valuable, informative pieces.",
     image: "/images/article/img_sm_placeholder.png",
     author: {
       name: "Musharof Chy",
       image: "/images/article/avatar-profile.png",
       designation: "Content Writer",
     },
-    tags: ["computer"],
+    tags: ["design"],
     publishDate: "2025",
   },
   {
     id: 3,
     url: "/",
-    title: "Tips to quickly improve your coding speed.",
+    title: "Tools that improve coding skills.",
     paragraph:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit amet dictum neque, laoreet dolor.",
+      "Having the right tools for the job can greatly improve your efficiency. Understanding your audiences needs, interests and pain points is the cornerstone of compelling content.",
     image: "/images/article/blog-01.jpg",
     author: {
       name: "Lethium Deo",
       image: "/images/article/avatar-profile.png",
       designation: "Graphic Designer",
     },
-    tags: ["design"],
+    tags: ["coding"],
     publishDate: "2025",
   },
 ];

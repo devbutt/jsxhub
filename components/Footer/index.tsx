@@ -101,11 +101,11 @@ const Footer = () => {
                 <ul>
                   <li>
                     <a
-                      href="/posts"
+                      href="/articles"
                       className="mb-4 inline-block text-base font-medium text-body-color hover:text-primary"
                     >
                       {" "}
-                      Blog{" "}
+                      Articles{" "}
                     </a>
                   </li>
                   <li>
@@ -115,15 +115,6 @@ const Footer = () => {
                     >
                       {" "}
                       Documentation{" "}
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="/about"
-                      className="mb-4 inline-block text-base font-medium text-body-color hover:text-primary"
-                    >
-                      {" "}
-                      About{" "}
                     </a>
                   </li>
                 </ul>
@@ -138,7 +129,7 @@ const Footer = () => {
                 <ul>
                   <li>
                     <a
-                      href="/"
+                      href="/docs/guides/terms"
                       className="mb-4 inline-block text-base font-medium text-body-color hover:text-primary"
                     >
                       {" "}
@@ -147,7 +138,7 @@ const Footer = () => {
                   </li>
                   <li>
                     <a
-                      href="/"
+                      href="/docs/guides/privacy"
                       className="mb-4 inline-block text-base font-medium text-body-color hover:text-primary"
                     >
                       {" "}
@@ -175,11 +166,11 @@ const Footer = () => {
                   </li>
                   <li>
                     <a
-                      href="/"
+                      href="/about"
                       className="mb-4 inline-block text-base font-medium text-body-color hover:text-primary"
                     >
                       {" "}
-                      Terms of Use{" "}
+                      About Us{" "}
                     </a>
                   </li>
                 </ul>
